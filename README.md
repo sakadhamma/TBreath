@@ -40,6 +40,7 @@ End-to-end latency per sample (measured): **~138 ms** (preprocessing 136 ms + in
 TBreath/
 ├── DataSources.md                       ← data source URLs and citations (no PII redistributed)
 ├── benchmark_table.md                   ← human-readable benchmark summary table
+├── requirements.txt.                    ← all the requirements needed to run the program
 │
 ├── Model + HTML Asthma/                 ← Asthma PoC (RADicA dataset)
 │   ├── artifacts/
