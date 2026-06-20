@@ -1,0 +1,64 @@
+{
+  "phase_1_als_baseline": {
+    "name": "ALS baseline correction (SciPy sparse solve)",
+    "median_ms": 139.7340505000102,
+    "p10_ms": 133.91606669999874,
+    "p90_ms": 146.9069764999972,
+    "min_ms": 126.29480800001147,
+    "max_ms": 179.9817480000172
+  },
+  "phase_2_savgol": {
+    "name": "Savitzky-Golay smoothing",
+    "median_ms": 141.35639599999195,
+    "p10_ms": 136.98848789998692,
+    "p90_ms": 147.96640879998506,
+    "min_ms": 132.57760299998722,
+    "max_ms": 151.09262999999373
+  },
+  "phase_3_peak_detection": {
+    "name": "Prominence-based peak detection (cumulative)",
+    "median_ms": 136.4289119999995,
+    "p10_ms": 131.83946240000068,
+    "p90_ms": 142.37255129998232,
+    "min_ms": 128.45749600001,
+    "max_ms": 148.1479189999959
+  },
+  "phase_5_scale_and_rfe": {
+    "name": "StandardScaler + RFE transform",
+    "median_ms": 0.31069199999933517,
+    "p10_ms": 0.25318499997979416,
+    "p90_ms": 0.41572579999922255,
+    "min_ms": 0.2477200000043922,
+    "max_ms": 0.6820810000078836
+  },
+  "phase_6_random_forest_pred": {
+    "name": "Random Forest prediction (single sample)",
+    "median_ms": 34.59167100001537,
+    "p10_ms": 33.633337700013044,
+    "p90_ms": 36.72486980000258,
+    "min_ms": 33.23489100000643,
+    "max_ms": 46.369550999997955
+  },
+  "phase_6_xgboost_pred": {
+    "name": "XGBoost prediction (single sample)",
+    "median_ms": 0.8982559999992645,
+    "p10_ms": 0.8365116999925704,
+    "p90_ms": 0.9749374999870498,
+    "min_ms": 0.8086079999998219,
+    "max_ms": 2.0307659999900807
+  },
+  "_meta": {
+    "n_trials_per_phase": 50,
+    "chromatogram_length_samples": 15000,
+    "n_features_in": 142,
+    "n_features_after_rfe": 12,
+    "note": "Timings measured on a Linux container; absolute numbers scale to hardware. ALS dominates because it solves a sparse linear system per iteration over the full chromatogram; on a Raspberry Pi 4 this typically runs 2-4x slower than these numbers, putting end-to-end well under 1 sec."
+  },
+  "aggregates": {
+    "preprocessing_total_ms": 136.4289119999995,
+    "inference_rf_ms": 34.9023630000147,
+    "inference_xgb_ms": 1.2089479999985997,
+    "end_to_end_rf_ms": 171.33127500001422,
+    "end_to_end_xgb_ms": 137.6378599999981
+  }
+}
