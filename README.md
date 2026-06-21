@@ -4,7 +4,7 @@
 
 TBreath is an end-to-end screening prototype that classifies breath samples from a microGC + PID hardware front-end. It is currently demonstrated on a publicly available **asthma** dataset (RADicA) because no public TB breath-VOC dataset exists. The pipeline, model, and dashboard transfer directly once TB patient data is collected.
 
-> ⚠️ **Status: Proof of Concept.** The classifier has never seen TB patient data. The asthma dataset is used as a methodological proxy to validate the pipeline end-to-end. Clinical TB performance claims require collection of real patient samples (see roadmap in `reports/`).
+> ⚠️ **Status: Proof of Concept.** The classifier has never seen TB patient data. The asthma dataset is used as a methodological proxy to validate the pipeline end-to-end. Clinical TB performance claims require collection of real patient samples.
 
 ---
 
@@ -30,7 +30,7 @@ TBreath is an end-to-end screening prototype that classifies breath samples from
                                                  └──────────────────┘
 ```
 
-End-to-end latency per sample (measured): **~138 ms** (preprocessing 136 ms + inference 1 ms with XGBoost). See `artifacts/inference_timing.json`.
+End-to-end latency per sample (measured): **~138 ms** (preprocessing 136 ms + inference 1 ms with XGBoost).
 
 ---
 
