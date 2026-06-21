@@ -174,4 +174,4 @@ Public Health & Telemedicine track, Binus University, Indonesia.
 
 ## Acknowledgments
 
-Developed for the Public Health & Telemedicine track of the ASEAN AI Hackathon 2026. Code generation and pipeline architecture assistance from Anthropic's Claude (see `TBreath_AI_Use_Report.md` for full AI-use disclosure).
+Developed for the Public Health & Telemedicine track of the ASEAN AI Hackathon 2026. Code generation and pipeline architecture assistance from Anthropic's Claude.
